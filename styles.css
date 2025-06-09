@@ -1,0 +1,164 @@
+/* Base Styles */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --danger-color: #e74c3c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+/* Layout */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: var(--dark-color);
+    color: white;
+    border-radius: 5px;
+}
+
+.header .subtitle {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .gpa-display {
+        grid-column: span 2;
+    }
+}
+
+/* GPA Display */
+.gpa-display {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.gpa-value {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+.gpa-scale {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Form Styles */
+.assignment-form {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Assignments List */
+.assignments-list {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.assignments-container {
+    margin-top: 1rem;
+}
+
+.empty-message {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+}
+
+.assignment-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+}
+
+.assignment-item:last-child {
+    border-bottom: none;
+}
+
+.assignment-name {
+    font-weight: bold;
+}
+
+.assignment-grade {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: #777;
+    font-size: 0.9rem;
+}
