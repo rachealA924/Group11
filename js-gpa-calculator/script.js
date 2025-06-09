@@ -1,4 +1,15 @@
 
+let assignments = [];
+
+function calculateGPA() {
+  if (assignments.length === 0) return 0;
+  const total = assignments.reduce((sum, a) => sum + a.grade, 0);
+  return (total / assignments.length).toFixed(2);
+}
+
+function updateGPA() {
+  document.getElementById('gpa').textContent = calculateGPA();
+}
 const form = document.getElementById('assignment-form');
 const list = document.getElementById('assignment-list');
 
