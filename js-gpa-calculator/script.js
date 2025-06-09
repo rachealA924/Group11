@@ -33,3 +33,18 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+function saveToLocalStorage() {
+  localStorage.setItem('assignments', JSON.stringify(assignments));
+}
+
+function loadFromLocalStorage() {
+  const data = localStorage.getItem('assignments');
+  if (data) {
+    assignments = JSON.parse(data);
+    renderAssignments();
+    updateGPA();
+  }
+}
+
+window.addEventListener('load', loadFromLocalStorage);
+
